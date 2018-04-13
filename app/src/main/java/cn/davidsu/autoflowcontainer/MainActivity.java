@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.Random;
+
 import cn.davidsu.library.LineWrapContainer;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView textView = new TextView(MainActivity.this);
                 textView.setMaxLines(1);
                 textView.setEllipsize(TextUtils.TruncateAt.END);
-                textView.setText("add one add one");
+                textView.setText(rand() == 0 ? "add one" : "add one add");
                 textView.setBackgroundResource(R.drawable.text_bg);
                 textView.setPadding(10, 10, 10, 10);
 
@@ -64,5 +66,10 @@ public class MainActivity extends AppCompatActivity {
                 lwc.requestLayout();
             }
         });
+    }
+
+    private static int rand() {
+        Random rd = new Random();
+        return rd.nextInt(2);
     }
 }
