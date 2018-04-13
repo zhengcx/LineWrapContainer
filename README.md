@@ -40,3 +40,12 @@ dependencies {
 ```
 
 **PS: you can also add child view in java code.**
+
+# Attribute description
+
+| 属性      |     说明  | 
+| :--------  | --------:| 
+| maxLines    |   设置最大展示行数   | 
+| horizontalSpace    |   横向child之间的间距 | 
+| verticalSpace    |   每行间的间距 | 
+
