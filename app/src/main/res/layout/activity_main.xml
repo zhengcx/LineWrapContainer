@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context="cn.davidsu.autoflowcontainer.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="LineWrapContainer\n自动换行布局(可限制最大行数)"
+        android:textSize="16sp" />
+
+    <!-- 可设置最大行数 app:maxLines="2"-->
+    <cn.davidsu.library.LineWrapContainer
+        android:id="@+id/view_lwc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text"
+        android:layout_marginTop="20dp"
+        app:horizontalSpace="10dp"
+        app:verticalSpace="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:padding="5dp"
+            android:text="AndroidDeveloper" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:padding="5dp"
+            android:text="React-Native" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:padding="5dp"
+            android:text="iOS" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:padding="5dp"
+            android:text="Spring" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:padding="5dp"
+            android:text="WebSocket" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:padding="5dp"
+            android:text="a long long long word" />
+    </cn.davidsu.library.LineWrapContainer>
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:text="add one" />
+
+    <EditText
+        android:id="@+id/et_maxlines"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:hint="input MaxLines" />
+
+    <Button
+        android:id="@+id/tv_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/et_maxlines"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/et_maxlines"
+        android:text="Done" />
+
+</RelativeLayout>
